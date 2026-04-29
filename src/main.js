@@ -5,8 +5,7 @@ import heroImg from './assets/imgs/hero-img.png'
 import aboutImg from './assets/imgs/about-img.jpg'
 import cardioImg from './assets/imgs/cardio-img.jpg'
 import { Card } from './components/Card.js'
-import Swiper from 'swiper'
-import { swiper } from './components/Slider.js'
+import { initSlider } from './components/Slider.js'
 
 
 document.querySelector('#app').innerHTML = /* html */ `
@@ -87,13 +86,55 @@ document.querySelector('#app').innerHTML = /* html */ `
   
   </section>
 
+  <!--FORM-->
+  <section class='py-[95px]'>
+    <!--TEXT_BOX-->
+    <div>
+        <h1>Book your FREE</h1>
+        <p>First personal tanning</p>
+        <!--PARAGRAF-->
+        <p>Get proffesional coaching in first days on gym to healp you</p>
+        <p>achieve your sprts goals</p>
+    </div>
+    <!--FORM-->
+    <div class='container mx-auto flex flex-col items-center'>
+      <form class='flex flex-col items-center gap-5 w-full max-w-2xl'>
+          <div class='flex gap-5 w-full justify-center'>
+              <input  placeholder='name' class='bg-white border-b-2 border-black p-2 flex-1'>
+              <input  placeholder='e-mail' class='bg-white border-b-2 border-black p-2 flex-1'>
+          </div>
+          <div class='flex gap-5 w-full justify-center'>
+            <input  placeholder='Phone Number' class='bg-white border-b-2 border-black p-2 flex-1'>
+            <input  placeholder='Prefered Date' class='bg-white border-b-2 border-black p-2 flex-1'>
+          
+          </div>
+          <input  placeholder='Your Question' class='bg-white border-b-2 border-black p-8 w-full'>
+          <button type='submit' class='bg-black text-white px-8 py-3 rounded-full hover:bg-amber-300 hover:text-black transition-colors duration-300'>SUBMIT</button>
+      
+      </form>
+    </div>
+  
+  </section>
+
 </main>
 
 
-<footer></footer>
+<footer class='bg-black p-20 text-white text-center'>
+      <h1>Fitness</h1>
+      <div class='border-b-2 border-white p-2'>
+        <span>Reach<span>
+        <span>Your<span>
+        <span>Best<span>
+        <span>Shape<span>
+        <span>For<span>
+        <span>Life<span>
+      </div>
+
+
+</footer>
 
 
 
 `
 
-setupCounter(document.querySelector('#counter'))
+initSlider()
