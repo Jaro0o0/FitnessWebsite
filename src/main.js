@@ -18,36 +18,74 @@ const categories = [
 ];
 
 document.querySelector('#app').innerHTML = /* html */ `
-<header class='fixed top-0 left-0 w-full z-50 p-4'>
-  <div class='flex justify-between'>
-      <h1 class='text-white text-2xl' >Fitness</h1>
-      <ul class='flex text-white gap-2'>
-        <li class='text-white cursor-pointer font-bold hover:text-amber-300 transiton-colors duration-300'>Home</li>
-        <li class='text-white cursor-pointer font-bold hover:text-amber-300 transiton-colors duration-300'>About</li>
-        <li class='text-white cursor-pointer font-bold hover:text-amber-300 transiton-colors duration-300'>How it Works</li>
-        <li class='text-white cursor-pointer font-bold hover:text-amber-300 transiton-colors duration-300'>Results</li>
-        <li class='text-white cursor-pointer font-bold hover:text-amber-300 transiton-colors duration-300'>Testimonials</li>
+<header class='fixed top-0 left-0 w-full z-50 p-6'>
+  <div class='container mx-auto flex justify-between items-center'>
+      <h1 class='text-white text-3xl font-black tracking-tighter' >FITNESS<span class='text-amber-500'>GYM</span></h1>
+      <ul class='hidden lg:flex text-white gap-8 uppercase text-sm font-bold tracking-widest'>
+        <li class='cursor-pointer hover:text-amber-500 transition-colors'>Home</li>
+        <li class='cursor-pointer hover:text-amber-500 transition-colors'>About</li>
+        <li class='cursor-pointer hover:text-amber-500 transition-colors'>Classes</li>
+        <li class='cursor-pointer hover:text-amber-500 transition-colors'>Results</li>
+        <li class='cursor-pointer hover:text-amber-500 transition-colors'>Testimonials</li>
       </ul>
+      <button class='px-6 py-2 border-2 border-amber-500 text-amber-500 font-bold rounded-full hover:bg-amber-500 hover:text-black transition-all'>JOIN NOW</button>
   </div>
-
 </header>
 
 
 <main>
    
-    <section class='w-full h-screen bg-black relative '>
-      
-      <img src='${heroImg}' class='w-150 h-auto absolute  bottom-[0] left-1/2 -translate-x-1/2 '/>
-        <div class='pt-12'>
-            <h1 class='text-white text-[100px] text-center''>Reach Your Best</h1>
-            <p class='text-white text-[100px] text-center'>Shape or Life</p>
+    <section class='relative w-full h-screen bg-black flex items-center overflow-hidden'>
+        <!-- Decorative Background Text -->
+        <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/5 whitespace-nowrap z-0 pointer-events-none uppercase'>
+            HARD WORK
         </div>
-        <a class='  absolute bottom-[10%] right-[15%] inline-block p-5 bg-amber-300 text-white  font-bold  
-        uppercase rounded-3xl cursor-pointer hover:bg-amber-500  transition-colors duration-300 ' >Book A PLAN</a>
-       
-      
-      <h1 class='text-black'>ABCX</h1>
-  </section>
+
+        <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center relative z-10'>
+            <!-- Text Content -->
+            <div class='lg:w-1/2 text-center lg:text-left pt-20 lg:pt-0'>
+                <span class='inline-block mb-4 px-4 py-1 bg-amber-500 text-black text-xs font-black uppercase tracking-[0.3em] rounded-full'>
+                    Evolution Your Body
+                </span>
+                <h1 class='text-white text-6xl md:text-8xl lg:text-[120px] font-black leading-none uppercase mb-6'>
+                    REACH YOUR <br/> <span class='text-transparent [text-stroke:2px_white]'>BEST SHAPE</span>
+                </h1>
+                <p class='text-gray-400 text-lg md:text-xl max-w-xl mb-10 mx-auto lg:mx-0'>
+                    Push your limits and transform your life with our elite training programs. Professional coaching for professional results.
+                </p>
+                <div class='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+                    <a href='#' class='px-10 py-5 bg-amber-500 text-black font-black rounded-full hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-xl shadow-amber-500/20'>
+                        Book A Plan
+                    </a>
+                    <a href='#' class='px-10 py-5 border-2 border-white text-white font-black rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm'>
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class='mt-16 flex gap-12 justify-center lg:justify-start border-t border-white/10 pt-8'>
+                    <div>
+                        <p class='text-3xl font-black text-white'>10k+</p>
+                        <p class='text-gray-500 text-xs uppercase font-bold tracking-widest'>Members</p>
+                    </div>
+                    <div>
+                        <p class='text-3xl font-black text-white'>50+</p>
+                        <p class='text-gray-500 text-xs uppercase font-bold tracking-widest'>Coaches</p>
+                    </div>
+                    <div>
+                        <p class='text-3xl font-black text-white'>100%</p>
+                        <p class='text-gray-500 text-xs uppercase font-bold tracking-widest'>Results</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class='lg:w-1/2 relative mt-12 lg:mt-0'>
+                <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-amber-500/20 blur-[120px] rounded-full z-0'></div>
+                <img src='${heroImg}' class='relative z-10 w-full  h-auto mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] transform hover:scale-105 transition-transform duration-700'/>
+            </div>
+        </div>
+    </section>
 
   <!--ABOUT US-->
    <section class='py-24 bg-gray-50'>
@@ -100,15 +138,27 @@ document.querySelector('#app').innerHTML = /* html */ `
     </div>
   </section>
   
-  <section class='py-[95px]'>
-  <div class='container mx-auto'>
-    <h1  class='text-4xl md:text-5xl font-black text-black mt-4 mb-8 leading-tight'>Train Smarter</h1>
-    <!--CARDS-->
-    <div class='grid grid-cols-3 gap-2'>
-        <!--ROBIE STRING Z TABLICY-->
-        ${categories.map(({ title, imageSrc }) => Card({ title, imageSrc })).join('')}
+  <!--OFFER SECTION-->
+  <section class='py-32 bg-white'>
+    <div class='container mx-auto px-4'>
+        <div class='flex flex-col md:flex-row justify-between items-end mb-16 gap-8'>
+            <div class='max-w-2xl text-left'>
+                <span class='text-amber-500 font-bold uppercase tracking-widest text-sm'>Our Programs</span>
+                <h2 class='text-5xl md:text-7xl font-black text-black mt-4 leading-none uppercase'>
+                    Train <span class='text-transparent [text-stroke:1px_black]'>Smarter</span> <br/> Not Harder
+                </h2>
+            </div>
+            <div class='text-right'>
+                <p class='text-gray-500 max-w-sm mb-6 font-medium'>Choose from our specialized categories designed to push your limits and achieve your fitness goals.</p>
+                <a href='#' class='inline-block text-black font-black uppercase tracking-widest text-xs border-b-2 border-amber-500 pb-1 hover:text-amber-500 transition-colors'>View All Classes</a>
+            </div>
+        </div>
+
+        <!--CARDS GRID-->
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            ${categories.map(({ title, imageSrc }) => Card({ title, imageSrc })).join('')}
+        </div>
     </div>
-  </div>
   </section>
 
   <!--SECTION_SLIDER (TESTIMONIALS)-->
