@@ -8,7 +8,7 @@ export function Card({imageSrc , title}){
         </div>
            <!--TEXT_BOX-->
           <div class='p-4'>
-            <p>Carddio Power Boost</p>
+            <p>${title}</p>
           </div>
       </div>
 `
