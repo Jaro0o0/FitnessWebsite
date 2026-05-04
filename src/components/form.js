@@ -16,7 +16,7 @@ export function form(){
                     </div>
                     <div>
                         <p class='text-gray-500 text-xs uppercase font-bold tracking-widest'>Call Us</p>
-                        <p class='font-bold text-lg'>+1 (234) 567-890</p>
+                        <p class='font-bold text-lg'>111-111-111</p>
                     </div>
                 </div>
                 <div class='flex items-center gap-4 text-gray-900'>
