@@ -2,17 +2,7 @@ export function Footer() {
     return /* html */ `
 <footer class='bg-[#0a0a0a] pt-24 pb-12 text-white border-t border-gray-900'>
     <div class='container mx-auto px-6'>
-        <!-- NEWSLETTER SECTION -->
-        <div class='bg-amber-500 rounded-3xl p-8 md:p-12 mb-20 flex flex-col lg:flex-row items-center justify-between gap-8 transform -translate-y-1/2 -mb-0 shadow-2xl shadow-amber-500/20'>
-            <div class='text-black text-center lg:text-left'>
-                <h3 class='text-3xl font-black mb-2 tracking-tight'>READY TO TRANSFORM?</h3>
-                <p class='font-medium opacity-90 text-lg'>Subscribe to get fitness tips and 15% off your first month!</p>
-            </div>
-            <form class='flex w-full lg:w-auto gap-3 flex-col sm:flex-row'>
-                <input type='email' placeholder='Enter your email' class='bg-white text-black px-6 py-4 rounded-xl outline-none w-full lg:w-80 font-medium placeholder:text-gray-400 focus:ring-4 focus:ring-black/5 transition-all' />
-                <button class='bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition-all active:scale-95 whitespace-nowrap'>JOIN NOW</button>
-            </form>
-        </div>
+  
 
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20'>
             

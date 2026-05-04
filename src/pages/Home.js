@@ -1,17 +1,23 @@
 import heroImg from '../assets/imgs/hero-img.png'
 import aboutImg from '../assets/imgs/about-img.jpg'
 import cardioImg from '../assets/imgs/cardio-img.jpg'
+import strengthImg from '../assets/imgs/strength-img.jpg'
+import yogaImg from '../assets/imgs/yoga-img.jpg'
+import hiitImg from '../assets/imgs/hiit-img.jpg'
+import pilatesImg from '../assets/imgs/pilates-img.jpg'
+import boxingImg from '../assets/imgs/boxing-img.jpg'
+import { Trainers } from '../components/Trainers.js'
 import { Card } from '../components/Card.js'
 import { initSlider } from '../components/Slider.js'
 
 export function Home() {
     const categories = [
         { title: 'Cardio', imageSrc: cardioImg },
-        { title: 'Strength', imageSrc: cardioImg },
-        { title: 'Yoga', imageSrc: cardioImg },
-        { title: 'HIIT', imageSrc: cardioImg },
-        { title: 'Pilates', imageSrc: cardioImg },
-        { title: 'Stretching', imageSrc: cardioImg },
+        { title: 'Strength', imageSrc: strengthImg },
+        { title: 'Yoga', imageSrc: yogaImg },
+        { title: 'HIIT', imageSrc: hiitImg },
+        { title: 'Pilates', imageSrc: pilatesImg  },
+        { title: 'Boxing', imageSrc: boxingImg  },
     ];
 
     return {
@@ -28,7 +34,8 @@ export function Home() {
                     Evolution Your Body
                 </span>
                 <h1 class='text-white text-6xl md:text-8xl lg:text-[120px] font-black leading-none uppercase mb-6'>
-                    REACH YOUR <br/> <span class='text-transparent [text-stroke:2px_white]'>BEST SHAPE</span>
+                    REACH YOUR <br/> 
+                    GOALS
                 </h1>
                 <p class='text-gray-400 text-lg md:text-xl max-w-xl mb-10 mx-auto lg:mx-0'>
                     Push your limits and transform your life with our elite training programs. Professional coaching for professional results.
@@ -115,6 +122,7 @@ export function Home() {
     </div>
   </section>
   
+  <!--OFFER-->
   <section class='py-32 bg-white'>
     <div class='container mx-auto px-4'>
         <div class='flex flex-col md:flex-row justify-between items-end mb-16 gap-8'>
@@ -126,7 +134,7 @@ export function Home() {
             </div>
             <div class='text-right'>
                 <p class='text-gray-500 max-w-sm mb-6 font-medium'>Choose from our specialized categories designed to push your limits and achieve your fitness goals.</p>
-                <a href='#' class='inline-block text-black font-black uppercase tracking-widest text-xs border-b-2 border-amber-500 pb-1 hover:text-amber-500 transition-colors'>View All Classes</a>
+                <a href='/offer' data-link class='inline-block text-black font-black uppercase tracking-widest text-xs border-b-2 border-amber-500 pb-1 hover:text-amber-500 transition-colors'>View All Offer</a>
             </div>
         </div>
 
@@ -136,6 +144,10 @@ export function Home() {
     </div>
   </section>
 
+  <!--Trainers-->
+  ${Trainers()}
+
+  <!--Testimonials-->
   <section class='py-24 bg-white overflow-hidden'>
     <div class='container mx-auto px-4 text-center mb-16'>
         <span class='text-amber-500 font-bold uppercase tracking-widest text-sm'>Testimonials</span>
@@ -208,11 +220,10 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div class="swiper-pagination !-bottom-2"></div>
+        <div class="swiper-pagination bottom-4 [&_.swiper-pagination-bullet-active]:!bg-amber-500 [&_.swiper-pagination-bullet]:bg-gray-400"></div>
       </div>
     </div>
   </section>
-
 </main>
         `,
         init: () => {

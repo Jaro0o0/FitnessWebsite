@@ -1,12 +1,14 @@
 import './style.css'
-import { Header } from './components/Header.js'
+import { Header, initHeader } from './components/Header.js'
 import { Footer } from './components/Footer.js'
 import { Home } from './pages/Home.js'
 import { About } from './about.js'
+import {Offer} from './pages/Offer.js'
 
 const routes = {
     '/': Home,
-    '/about': About
+    '/about': About,
+    '/offer' : Offer,
 };
 
 const router = async () => {
@@ -20,6 +22,9 @@ const router = async () => {
         <div id="content">${page.html}</div>
         ${Footer()}
     `;
+    
+    // Inicjalizacja komponentów po wstrzyknięciu do DOM
+    initHeader();
     
     if (page.init) {
         page.init();
