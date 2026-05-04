@@ -1,16 +1,18 @@
 import { TrainerCard } from "./TrainerCard"
 import imgOne from '../assets/imgs/trainer-one-img.jpg'
+import imgTwo from '../assets/imgs/trainer-two-img.jpg'
+import imgThree from '../assets/imgs/trainer-three-img.jpg'
 
 const staff = [ 
-    { imageSrc: imgOne, name: 'John "The Beast" Wick', role: 'Head Coach' },
-    { imageSrc: imgOne, name: 'Sarah "Power" Jenkins', role: 'Strength Specialist' },
-    { imageSrc: imgOne, name: 'Mike "Flow" Ross', role: 'Yoga Master' }
+    { imageSrc: imgOne, name: 'John "The Beast" Wick', role: 'Strength Specialist' },
+    { imageSrc: imgTwo , name: 'Sarah "Power" Jenkins', role: 'Strength Specialist' },
+    { imageSrc: imgThree, name: 'Mike "Flow" Ross', role: 'Yoga Master' }
 ]
 
 
 export function Trainers() {
     return /*html*/ `
-    <section class='py-32 bg-zinc-950 overflow-hidden'>
+    <section  class='py-32 bg-zinc-950 overflow-hidden'>
         <div class='container mx-auto px-4'>
             <div class='flex flex-col md:flex-row justify-between items-end mb-20 gap-8'>
                 <div class='max-w-2xl text-left'>
@@ -28,6 +30,7 @@ export function Trainers() {
                 ${staff.map(({ imageSrc, name, role }) => TrainerCard({ imageSrc, name, role })).join('')}
             </div>
 
+            <!--BUTTON-->
             <div class='mt-20 text-center'>
                 <p class='text-gray-500 font-medium mb-8'>Interested in joining our elite coaching team?</p>
                 <a href="#" class='inline-block px-10 py-4 border border-zinc-800 text-white font-black rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-xs'>

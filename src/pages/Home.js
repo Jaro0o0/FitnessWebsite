@@ -23,24 +23,27 @@ export function Home() {
     return {
         html: /* html */ `
 <main>
-    <section class='relative w-full h-screen bg-black flex items-center overflow-hidden'>
+    <!--HERO-->
+    <section class='relative w-full min-h-screen bg-black flex items-center overflow-hidden pt-32 pb-0 lg:pt-20'>
         <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/5 whitespace-nowrap z-0 pointer-events-none uppercase'>
             HARD WORK
         </div>
 
-        <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center relative z-10'>
-            <div class='lg:w-1/2 text-center lg:text-left pt-20 lg:pt-0'>
+
+        <div class='container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-center relative z-10 h-full'>
+            <div class='lg:w-1/2 text-center lg:text-left'>
                 <span class='inline-block mb-4 px-4 py-1 bg-amber-500 text-black text-xs font-black uppercase tracking-[0.3em] rounded-full'>
                     Evolution Your Body
                 </span>
-                <h1 class='text-white text-6xl md:text-8xl lg:text-[120px] font-black leading-none uppercase mb-6'>
+                <h1 class='text-white text-5xl md:text-7xl lg:text-[90px] font-black leading-none uppercase mb-6'>
                     REACH YOUR <br/> 
                     GOALS
                 </h1>
                 <p class='text-gray-400 text-lg md:text-xl max-w-xl mb-10 mx-auto lg:mx-0'>
                     Push your limits and transform your life with our elite training programs. Professional coaching for professional results.
                 </p>
-                <div class='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+                <!--BUTTONS-->
+                <div class='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8'>
                     <a href='#' class='px-10 py-5 bg-amber-500 text-black font-black rounded-full hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-xl shadow-amber-500/20'>
                         Book A Plan
                     </a>
@@ -65,13 +68,15 @@ export function Home() {
                 </div>
             </div>
 
-            <div class='lg:w-1/2 relative mt-12 lg:mt-0'>
+            <!--IMG_BOX-->
+            <div class='lg:w-1/2 relative mt-16 lg:mt-0'>
                 <div class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-amber-500/20 blur-[120px] rounded-full z-0'></div>
                 <img src='${heroImg}' class='relative z-10 w-full h-auto mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] transform hover:scale-105 transition-transform duration-700'/>
             </div>
         </div>
     </section>
 
+    <!--ABOUT-->
    <section class='py-24 bg-gray-50'>
     <div class='container mx-auto px-4'>
       <div class='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
@@ -123,13 +128,13 @@ export function Home() {
   </section>
   
   <!--OFFER-->
-  <section class='py-32 bg-white'>
+  <section  class='py-32 bg-white'>
     <div class='container mx-auto px-4'>
         <div class='flex flex-col md:flex-row justify-between items-end mb-16 gap-8'>
             <div class='max-w-2xl text-left'>
                 <span class='text-amber-500 font-bold uppercase tracking-widest text-sm'>Our Programs</span>
                 <h2 class='text-5xl md:text-7xl font-black text-black mt-4 leading-none uppercase'>
-                    Train <span class='text-transparent [text-stroke:1px_black]'>Smarter</span> <br/> Not Harder
+                    Train <br/> <span class='[text-stroke:1px_black]'>Smarter</span> 
                 </h2>
             </div>
             <div class='text-right'>

@@ -33,7 +33,8 @@ export function Offer() {
     return {
         html: /*html*/ `
             <main class="pt-24 min-h-screen bg-black text-white">
-                <div class="container mx-auto px-4 py-24 bg-black">
+                <div class="container mx-auto px-4 h-[75vh] flex flex-col justify-center bg-black">
+                    <!--TEXT_BOX-->
                     <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                         <div class="max-w-2xl text-left">
                             <span class="text-amber-500 font-bold uppercase tracking-widest text-sm">Services</span>
@@ -45,7 +46,10 @@ export function Offer() {
                             Tailored fitness solutions designed for your specific goals. Choose the path that leads to your transformation.
                         </p>
                     </div>
-                    
+                </div>
+                
+                <!--CARD_BOX-->
+                <div class="container mx-auto px-4 py-24 bg-black">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!--PERSONAL-->
                         <div class="group p-10 bg-zinc-900/50 rounded-3xl border border-zinc-800 hover:border-amber-500/50 transition-all duration-500 relative overflow-hidden">
@@ -139,7 +143,7 @@ export function Offer() {
                                 <!--SUBHEADING-->
                                 <span class='text-amber-500 font-bold uppercase tracking-widest text-sm'>Our Programs</span>
                                 <h2 class='text-5xl md:text-7xl font-black text-black mt-4 leading-none uppercase'>
-                                    Train <span class='text-transparent [text-stroke:1px_black]'>Smarter</span> <br/> Not Harder
+                                    Train  <br/> <span class=' [text-stroke:1px_black]'>Smarter</span>
                                 </h2>
                             </div>
                         </div>
