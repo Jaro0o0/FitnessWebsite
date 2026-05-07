@@ -25,7 +25,7 @@ export function form(){
                     </div>
                     <div>
                         <p class='text-gray-500 text-xs uppercase font-bold tracking-widest'>Email Us</p>
-                        <p class='font-bold text-lg'>hello@usgym.com</p>
+                        <p class='font-bold text-lg'>hello@fitnessgym.com</p>
                     </div>
                 </div>
             </div>
